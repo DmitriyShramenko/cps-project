@@ -25,10 +25,3 @@ new Swiper('.swiper', {
 	},
 	spaceBetween: 16,
 });
-
-
-
-
-
-
-
