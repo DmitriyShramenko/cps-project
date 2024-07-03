@@ -1,0 +1,320 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../../fonts/TTLakes-Regular.eot");
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"), url("../../fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/TTLakes-Regular.woff") format("woff"), url("../../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../../fonts/TTLakes-Medium.eot");
+  src: local("TT Lakes Medium"), local("TTLakes-Medium"), url("../../fonts/TTLakes-Medium.eot?#iefix") format("embedded-opentype"), url("../../fonts/TTLakes-Medium.woff") format("woff"), url("../../fonts/TTLakes-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../../fonts/TTLakes-Bold.eot");
+  src: local("TT Lakes Bold"), local("TTLakes-Bold"), url("../../fonts/TTLakes-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/TTLakes-Bold.woff") format("woff"), url("../../fonts/TTLakes-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
+  src: url("../../fonts/TTLakes-Light.eot");
+  src: local("TT Lakes Light"), local("TTLakes-Light"), url("../../fonts/TTLakes-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/TTLakes-Light.woff") format("woff"), url("../../fonts/TTLakes-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+body {
+  font-family: "TT Lakes", sans-serif;
+  width: 100%;
+  height: 100%;
+  background-color: #F8F8F8;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+}
+
+header {
+  background-color: #FFF;
+}
+header .header-logo {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
+}
+header .header-logo__start, header .header-logo__elements {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.main-title {
+  display: flex;
+  gap: 12px;
+  min-height: 40px;
+  margin: 24px 16px 24px 0;
+  white-space: nowrap;
+}
+.main-title__text {
+  display: flex;
+  align-items: center;
+  border-left: #41F6D7 3px solid;
+  padding-left: 15px;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  right: 16px;
+}
+.main-title__text h2 {
+  font-weight: 700;
+}
+
+.main-slide-menu {
+  display: flex;
+  min-height: 40px;
+  align-items: baseline;
+  overflow: auto;
+  scrollbar-width: none;
+  box-sizing: border-box;
+  color: #7E7E82;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 24px;
+  justify-content: space-around;
+}
+.main-slide-menu__button {
+  margin-bottom: 13px;
+  margin-right: 20px;
+  padding: 8px 10px;
+  color: #7E7E82;
+  white-space: nowrap;
+}
+.main-slide-menu__button--active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #B8FFEC;
+  border-radius: 6px;
+  min-height: 40px;
+  background-color: white;
+  padding: 8px 9px 8px 16px;
+}
+
+.main-block {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+.main-block__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  min-width: 288px;
+  margin: 0 19px 16px 0;
+  color: #1B1C21;
+  font-weight: 500;
+}
+.main-block__read-more {
+  display: flex;
+  font-size: 16px;
+  font-weight: 500;
+  gap: 8px;
+}
+.main-block__image {
+  width: 100%;
+  height: auto;
+}
+.main-block__read-more::before {
+  content: url("img/icon.svg");
+  width: 7px;
+  height: 10px;
+  margin-left: 10px;
+}
+
+@media (min-width: 320px) {
+  .main-title__logo {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .header-logo__start,
+  .header-logo__elements {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+  .header-logo__start {
+    margin-left: 24px;
+  }
+  .main-title {
+    margin: 24px 512px 32px 0;
+  }
+  .main-title__logo,
+  .main-block__FullScreen {
+    display: none;
+  }
+  .main-slide-menu__button_3,
+  .main-slide-menu__button_4,
+  .main-slide-menu__button_6 {
+    display: flex;
+  }
+  .main-block {
+    flex-direction: row;
+  }
+  .main-block__text {
+    line-height: 20px;
+    margin: 0 48px 10px 1px;
+  }
+  .main-block__read-more {
+    margin-top: 16px;
+  }
+  .main-block__image {
+    width: auto;
+    max-width: 362px;
+    border-radius: 6px;
+  }
+}
+@media (min-width: 1119px) {
+  .header {
+    display: none;
+  }
+  .container {
+    max-width: 1120px;
+    padding-top: 42px;
+    margin: 0 auto;
+  }
+  .main-title {
+    min-width: 1096px;
+    justify-content: space-between;
+    margin: 0 32px 8px 1px;
+  }
+  .main-title__text {
+    border-left: #41F6D7 2px solid;
+  }
+  .main-title__text img {
+    display: none;
+  }
+  .main-title__logo {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-weight: 500;
+  }
+  .main-slide-menu {
+    min-width: 1063px;
+    height: 80px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin: 0 25px 16px 15px;
+    gap: 10px;
+  }
+  .main-slide-menu__button {
+    margin: 0;
+  }
+  .main-block__text {
+    max-width: 490px;
+    line-height: 20px;
+    margin: 0 36px 14px 16px;
+  }
+  .main-block__image {
+    width: 100%;
+    max-width: 532px;
+  }
+}/*# sourceMappingURL=style.css.map */
