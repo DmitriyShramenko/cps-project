@@ -87,6 +87,13 @@ h6 {
 
 @font-face {
   font-family: "TT Lakes";
+  src: url("../fonts/TTLakes-Regular.eot");
+  src: local("TT Lakes Regular"), local("TTLakes-Regular"), url("../../fonts/TTLakes-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/TTLakes-Regular.woff") format("woff"), url("../../fonts/TTLakes-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "TT Lakes";
   src: url("../../fonts/TTLakes-Light.eot");
   src: local("TT Lakes Light"), local("TTLakes-Light"), url("../../fonts/TTLakes-Light.eot?#iefix") format("embedded-opentype"), url("../../fonts/TTLakes-Light.woff") format("woff"), url("../../fonts/TTLakes-Light.ttf") format("truetype");
   font-weight: 300;
@@ -166,21 +173,48 @@ body {
   border-radius: 15%;
   transform: translate(-65%, -50%) rotate(-45deg);
 }
-.brand .hidden {
+.brand .brand-list__elements .brand-list__symbol:hover {
+  opacity: 0.5;
+}
+.brand .brand-list .second-elements {
+  background-color: white;
+  min-height: 160px;
+  min-width: 224px;
+  flex: 0 0 auto;
+  border: solid 1px #B5B6BC;
+  border-radius: 6px;
+  position: relative;
+}
+.brand .brand-list .second-elements span {
+  font-weight: 500;
+  font-size: 16px;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.brand .brand-list .second-elements .brand-list__symbol {
+  left: 170px;
+  top: 95px;
+}
+.brand .hidden1,
+.brand .hidden2 {
   display: none;
 }
 
-.brand-button {
+.brand-button1,
+.brand-button2 {
   background-color: #EAEAEA;
   font-size: 16px;
   font-family: "TT Lakes", sans-serif;
   position: relative;
   left: 20px;
+  padding-bottom: 10px;
 }
-.brand-button::before {
+.brand-button1::before,
+.brand-button2::before {
   content: "";
   position: absolute;
-  top: 45%;
+  top: 12px;
   right: 105px;
   width: 7px;
   height: 7px;
@@ -189,10 +223,11 @@ body {
   border-radius: 15%;
   transform: translate(-65%, -50%) rotate(45deg);
 }
-.brand-button::after {
+.brand-button1::after,
+.brand-button2::after {
   content: "";
   position: absolute;
-  top: 10%;
+  top: 5px;
   right: 105px;
   width: 7px;
   height: 7px;
@@ -212,7 +247,7 @@ body {
 .hide-button::before {
   content: "";
   position: absolute;
-  top: 60%;
+  top: 15px;
   right: 60px;
   width: 7px;
   height: 7px;
@@ -224,7 +259,7 @@ body {
 .hide-button::after {
   content: "";
   position: absolute;
-  top: 30%;
+  top: 10px;
   right: 60px;
   width: 7px;
   height: 7px;
@@ -281,6 +316,165 @@ body {
   border-radius: 15%;
   transform: translate(-65%, -50%) rotate(-45deg);
 }
+.swiper .swiper-wrapper .second-swiper__slide {
+  height: 160px;
+}
+.swiper .swiper-wrapper .second-swiper__slide span {
+  font-weight: 500;
+  font-size: 16px;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+}
+.swiper .swiper-wrapper .second-swiper__slide .swiper-slide__symbol {
+  left: 170px;
+  top: 95px;
+}
+.swiper .swiper-wrapper .third-swiper_slide {
+  height: 190px;
+}
+.swiper .swiper-wrapper .third-swiper_slide div {
+  display: flex;
+  flex-direction: column;
+  margin: 16px auto 16px 16px;
+}
+.swiper .swiper-wrapper .third-swiper_slide div span {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+.swiper .swiper-wrapper .third-swiper_slide div .condition {
+  color: #7E7E82;
+  margin-bottom: 4px;
+}
+.swiper .swiper-wrapper .third-swiper_slide .order-button {
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  background-color: #FF3E79;
+  padding: 4px 25px 4px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  top: -35px;
+  left: 125px;
+}
+.swiper .swiper-wrapper .third-swiper_slide .order-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #FFf;
+  border-radius: 15%;
+  transform: translate(-65%, -50%) rotate(-45deg);
+}
+
+.price-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+.price-list .price-list__header {
+  font-weight: bold;
+  border-bottom: 1px solid #dddddd;
+}
+.price-list .price-list__header th {
+  padding: 16px;
+  text-align: left;
+  color: #7E7E82;
+  font-size: 14px;
+  font-weight: 500;
+}
+.price-list .prise-list__body {
+  background-color: #fff;
+}
+.price-list .prise-list__body tr {
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #EAEAEA;
+}
+.price-list .prise-list__body tr td {
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+.price-list .prise-list__body tr td .order-button {
+  font-weight: 700;
+  font-size: 12px;
+  color: #fff;
+  background-color: #FF3E79;
+  padding: 4px 25px 4px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+}
+.price-list .prise-list__body tr td .order-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 90px;
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #FFf;
+  border-radius: 15%;
+  transform: translate(-65%, -50%) rotate(-45deg);
+}
+.price-list .prise-list__body tr td .order-button:hover {
+  opacity: 0.5;
+}
+
+.second-swiper {
+  height: 200px;
+  width: 240px;
+  margin-top: 16px;
+}
+
+.third-swiper {
+  height: 230px;
+}
+
+.warning {
+  font-size: 14px;
+  max-width: 440px;
+  margin-top: 20px;
+}
+.warning span {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 16px;
+  position: relative;
+  cursor: pointer;
+}
+.warning span::before {
+  content: "";
+  position: absolute;
+  bottom: 2%;
+  left: 110%;
+  width: 10px;
+  height: 10px;
+  border-right: 3px solid #FF3E79;
+  border-bottom: 3px solid #FF3E79;
+  border-radius: 15%;
+  transform: translate(-65%, -50%) rotate(-45deg);
+}
+
+.footer .container {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #7E7E82;
+  border-top: 1px solid #D9FFF5;
+  padding: 16px;
+}
 
 @media (min-width: 768px) {
   .swiper {
@@ -288,8 +482,12 @@ body {
   }
 }
 @media (max-width: 767px) {
-  .brand {
+  .brand,
+  .price-list {
     display: none;
+  }
+  .footer .container {
+    flex-direction: column;
   }
 }
 @media (min-width: 1120px) {
