@@ -1,7 +1,7 @@
 {
-  "name": "web-last-block",
+  "name": "block7",
   "version": "1.0.0",
-  "description": "",
+  "description": "- [Node 14.18.3](https://nodejs.org/download/release/v14.18.3/)\r - [NVM/MacOC](https://tecadmin.net/install-nvm-macos-with-homebrew/)\r - [NVM/Windows](https://github.com/coreybutler/nvm-windows/releases) Если Windows то установка только от имени администратора\r - [Yarn](https://yarnpkg.com/)",
   "keywords": [
     "web",
     "scss",
@@ -32,14 +32,14 @@
     "autoprefixer": "9.6.1",
     "babel-loader": "8.0.6",
     "copy-webpack-plugin": "5.1.0",
-    "css-loader": "3.2.0",
+    "css-loader": "^3.2.0",
     "file-loader": "4.2.0",
     "gh-pages": "2.1.1",
     "html-webpack-plugin": "3.2.0",
-    "mini-css-extract-plugin": "0.8.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
-    "postcss-loader": "3.0.0",
-    "sass-loader": "7.2.0",
+    "postcss-loader": "^4.0.0",
+    "sass-loader": "^8.0.0",
     "webpack": "4.41.2",
     "webpack-cli": "3.3.7",
     "webpack-dev-server": "^3.11.0"
@@ -53,5 +53,6 @@
     "plugins": {
       "autoprefixer": {}
     }
-  }
+  },
+  "dependencies": {}
 }
