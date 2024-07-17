@@ -1,38 +1,30 @@
 import '../scss/style.scss'
 import './buttons.js'
 
-console.log('Works!')
-
 let swiperInstance;
 
 function initSwiper() {
-  if (window.innerWidth < 768) {
-      if (!swiperInstance) {
-          swiperInstance = new Swiper('.swiper', {
-            slidesPerView: 1,
-            spaceBetween: 10,
+    if (window.innerWidth < 768) {
+        let swiper = new Swiper('.swiper', {
             pagination: {
-              el: '.swiper-pagination',
-              clickable: true,
-          },
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    enabled: true,
+                },
+                768: {
+                    enabled: false,
+                }
+            },
+            spaceBetween: 16
         });
-      }
     } else {
-      if (swiperInstance) {
-        swiperInstance.destroy(true, true);
-        swiperInstance = null;
-      }
         const swiperContainers = document.querySelectorAll('.swiper');
         swiperContainers.forEach(swiperContainer => {
-            const swiperWrapper = swiperContainer.querySelector('.swiper-wrapper');
-            if (swiperWrapper) {
-                while (swiperWrapper.firstChild) {
-                    swiperWrapper.removeChild(swiperWrapper.firstChild);
-          }
-        }
-				swiperContainer.remove();
-
-      });
+            swiperContainer.remove();
+        });
     }
 }
 
