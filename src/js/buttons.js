@@ -1,3 +1,4 @@
+let readMoreBtn = document.querySelector('.read-more__button');
 let burgerBtn = document.querySelector('.burger-btn');
 let closeBtn = document.querySelector('.main-menu__close-btn');
 let button1 = document.querySelector('.brand-button1');
@@ -6,8 +7,21 @@ let phoneBtn = document.querySelector('.phone-btn');
 let callCloseBtn = document.querySelector('.call__close-btn');
 let messageBtn = document.querySelector('.message-btn');
 let feedbackCloseBtn = document.querySelector('.feedback__close-btn');
+const lorem = document.querySelector('.read-more__lorem.hidenLorem');
 const hiddenElements1 = document.querySelectorAll('.brand-list__elements.hidden1');
 const hiddenElements2 = document.querySelectorAll('.brand-list__elements.hidden2');
+
+readMoreBtn.addEventListener('click', function () {
+	if (readMoreBtn.textContent === 'Читать далее') {		
+		lorem.classList.remove('hidenLorem');
+		readMoreBtn.textContent = 'Скрыть';
+		readMoreBtn.classList.add('lorem__hide-button');
+	} else {		
+		lorem.classList.add('hidenLorem');
+		readMoreBtn.textContent = 'Читать далее';
+		readMoreBtn.classList.remove('lorem__hide-button');
+	}
+});
 
 button1.addEventListener('click', function () {
 	if (button1.textContent === 'Показать все') {

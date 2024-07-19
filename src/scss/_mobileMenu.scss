@@ -154,3 +154,9 @@ button:hover,
 .main-menu__footer-buttons button {
 	background-color: white;
 }
+
+@media (max-width: 320px) {
+	.main-menu {
+	box-shadow: 0 0 0 0;
+	}
+}

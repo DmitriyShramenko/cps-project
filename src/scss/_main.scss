@@ -23,7 +23,7 @@
 	&__logo {
 		display: none;
 		button {
-			background-color: #fff;
+			background-color: #f8f8f8;
 		}
 	}
 }
@@ -72,29 +72,62 @@
 		flex-direction: column;
 		font-size: 14px;
 		min-width: 288px;
-		margin: 0 19px 16px 0;
+		margin: 0 19px 25px 0;
 		color: #1B1C21;
 		font-weight: 500;
-	}
-
-	&__read-more {
-		display: flex;
-		font-size: 16px;
-		font-weight: 500;
-		gap: 8px;
-
-		div {
+	
+		.main-block__read-more {
+			font-size: 16px;
+			font-weight: 500;
+			margin-top: 0;
 			position: relative;
-			left: 45px;
 
-			&::before {
-				content: url("../img/icon.svg");
-				width: 7px;
-				height: 10px;
-				margin-left: 10px;
-				position: absolute;
-				left: -35px;
-				top: -4px;
+			.read-more__button {
+				background-color: #f8f8f8;
+				font-size: 16px;
+				font-weight: 500;
+				position: relative;
+				left: 45px;
+				top: 10px;
+
+				&::before {
+					content: url("../img/icon.svg");
+					width: 7px;
+					height: 10px;
+					margin-left: 10px;
+					position: absolute;
+					left: -45px;
+					top: -4px;
+				}
+			}
+
+			.read-more__lorem {
+				font-size: 14px;
+				font-weight: 500;
+			}
+
+			.hidenLorem {
+				display: none;
+			}
+
+			.lorem__hide-button {
+				background-color: #f8f8f8;
+				font-size: 16px;
+				font-family: 'TT Lakes', sans-serif;
+				position: relative;
+				left: 20px;
+				top: 65px;
+			
+					&::before {
+						content: url("../img/icon.svg");
+						width: 7px;
+						height: 10px;
+						margin-left: 10px;
+						position: absolute;
+						transform: rotate(180deg);
+						left: -15px;
+    				top: 12px;
+				}
 			}
 		}
 	}
@@ -103,4 +136,12 @@
 		width: 100%;
 		height: auto;
 	}
+}
+
+@media (max-width: 767px) {			
+		.main-block__read-more {
+			.read-more__lorem {
+				margin-bottom: 30px;
+			}
+		}
 }

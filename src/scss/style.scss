@@ -16,7 +16,7 @@ body {
 	font-family: 'TT Lakes', sans-serif;
 	width: 100%;
 	height: 100%;
-	background-color: #fff;
+	background-color: #f8f8f8;
 	overflow-x: hidden;
 }
 
@@ -64,9 +64,8 @@ header {
 }
 
 @media (max-width: 320px) {
-
 	body {
-		background-color: #f8f8f8;
+		overflow-x: hidden;
 	}
 
 	.title {
@@ -114,7 +113,6 @@ header {
 
 	.main-block {
 		flex-direction: row;
-		margin-right: 150px;
 
 		&__text {
 			line-height: 20px;
@@ -140,7 +138,7 @@ header {
 
 	.container {
 		margin: 0 320px;
-		padding-right: 380px;
+		padding-right: 350px;
 	}
 
 	.main {
@@ -148,9 +146,8 @@ header {
 	}
 
 	.main-title {
-		min-width: 1096px;
 		justify-content: space-between;
-		margin: 0 160px 8px 1px;
+		margin: 0 0 8px 1px;
 
 		&__text {
 			border-left: #41F6D7 2px solid;
@@ -169,11 +166,10 @@ header {
 	}
 
 	.main-slide-menu {
-		min-width: 1063px;
 		height: 80px;
 		flex-wrap: wrap;
 		justify-content: flex-start;
-		margin: 0 25px 16px 15px;
+		margin: 0 0 16px 15px;
 		gap: 10px;
 
 		&__button {
@@ -195,5 +191,11 @@ header {
 	.main-menu {
 		transform: translateX(0);
 		box-shadow: 0 0 0 0;
+		&__header-buttons {
+			gap: 50px;
+		}
+		&__close-btn {
+			display: none;
+		}
 	}
 }

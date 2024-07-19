@@ -1,7 +1,7 @@
 .title {
 	border-top: 1px solid #D9FFF5 ;
 	margin-top: 0;
-	background-image: linear-gradient(to right, #f8f8f8 50%, #fff);
+	background-image: linear-gradient(to right, #f8f8f8, #fff);
 
 	h1 {
 		color: #7E7E82;
@@ -97,7 +97,7 @@
 
 .brand-button1,
 .brand-button2 {
-	background-color: #fff;
+	background-color: #f8f8f8;
 	font-size: 16px;
 	font-weight: 500;
 	position: relative;
@@ -132,7 +132,7 @@
 }
 
 .hide-button {
-	background-color: #fff;
+	background-color: #f8f8f8;
 	font-size: 16px;
 	font-family: 'TT Lakes', sans-serif;
 	position: relative;
@@ -284,10 +284,8 @@
 		display: none;
 	}
 
-	.footer {
-		.container {
-			flex-direction: column;
-		}
+	.footer-links {
+			flex-direction: column;		
 	}
 }
 
